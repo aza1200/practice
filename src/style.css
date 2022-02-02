@@ -1,0 +1,114 @@
+#root{
+    height: 100vh;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btns{
+    margin-top: 10px;
+    display:flex;
+    justify-content: center;
+}
+
+.btn{
+    width:30px;
+    height:30px;
+    border-radius: 50%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 7px;
+    font-weight: bold;
+}
+
+.container > h1{
+    text-align: center;
+}
+
+.cube-container{
+    margin-top: 100px;
+    position: relative;
+    height: 400px;
+    width: 400px;
+    /*div 기본 display block*/
+    /* 속성이 바뀔떄 시간제한을 주는 것 delay duration delay 순임*/
+    transition: all 2s ease-out;
+    --webkit-transition: all 2s ease-out;
+    -o-transition: all 2s ease-out;
+
+    perspective: 100000px;
+    transform-style: preserve-3d;
+    transform: rotateX(15deg) rotateZ(15deg);
+}
+
+.cube img{
+    width:400px;
+    height:400px;
+}
+
+.cube{
+    position:absolute;
+}
+
+/*1 번면*/
+.cube-container .front{
+    transform: rotateX(0deg) translateZ(200px);
+}
+
+/*2번면*/
+.cube-container .right{
+    transform: rotateY(90deg) translateZ(200px);
+}
+
+/*3번면*/
+.cube-container .top{
+    transform: rotateX(90deg) translateZ(200px);
+}
+
+/*4번면*/
+.cube-container .back{
+    transform: rotateX(180deg) translateZ(200px);
+}
+
+/*5번면*/
+.cube-container .left{
+    transform: rotateY(-90deg) translateZ(200px);
+}
+
+/*6번면*/
+.cube-container .bottom{
+    transform: rotateX(90deg) translateZ(-200px);
+}
+
+/*front*/
+.changed_front{
+    transform: rotateX(0deg);
+ }
+
+/*right*/
+.changed_right{
+    transform: rotateY(-90deg) ;
+ }
+
+/*top*/
+.changed_top{
+    transform:  rotateX(-90deg);
+ }
+
+/*back*/
+.changed_back{
+    transform:  rotateX(-180deg);
+ }
+
+/*left*/
+.changed_left{
+    transform:  rotateY(90deg);
+ }
+
+/*bottom*/
+.changed_bottom{
+    transform: rotateX(-90deg);
+ }
